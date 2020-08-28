@@ -51,7 +51,7 @@
         </div>
       </div>-->
       <div class='info'>
-        <p class="infoText">i</p>
+        <p class="infoText">i<span class="infoTextSpan">Cosas para hacer<br><p class="description">Lista de cosas para hacer siguiendo la tendencia de diseño neomorfista.</p></span></p>
       </div>
 
       <Clock />
@@ -76,10 +76,10 @@
           </button>
         </div>
       </form>
-      <ul class:list={todos.length > 0}>
+      <ul class:list={todos.length > 0} style="max-width: 500px; margin: 0 auto;">
         {#each todos as todo (todo.id)}
           <li class="list-item" transition:slide="{{duration: 300, easing: elasticInOut}}">
-            <div class="is-flex" style="align-items: center">
+            <div class="is-flex" style="align-items: center;">
               <span class="is-pulled-left">{todo.text}</span>
               <div style="flex: 1"></div>
               <button class="button is-text is-pulled-right is-small" on:click={()=> removeTodo(todo.id)}>
@@ -159,6 +159,53 @@
     font-size: 30px;
     font-family: Georgia, 'Times New Roman', Times, serif
   }
+
+  .infoText:hover span{
+    display:block;
+}
+
+  .infoTextSpan {
+    border-radius: 30px;
+    background: #dde9f7;
+    box-shadow:  6px 6px 12px #bcc6d2, 
+                -6px -6px 12px #feffff;
+    position: fixed;
+    top: 10%;
+    right: 2%;
+    width: 500px;
+    height: 100px;
+    display: none;
+    font-family: sans-serif;
+
+    /*background:#F8F8F8;*/
+    /*border: 5px solid #DFDFDF;*/
+    /*color: #717171;*/
+    /*font-size: 13px;*/
+    /*height: 30px;*/
+    /*letter-spacing: 1px;*/
+    /*line-height: 30px;*/
+    /*position: relative;*/
+    /*text-align: center;*/
+    /*text-transform: uppercase;
+    top: -80px;
+    left:-30px;
+    display:none;
+    padding:0 20px;*/
+  }
+
+  :global(body.dark-mode) .infoTextSpan {
+    background: #1A1A1A;
+    box-shadow: 6px 6px 12px #121212, 
+                -6px -6px 12px #2A2A2A;
+  }
+
+  .description {
+    font-size: 15px;
+    line-height: 15px;
+    text-align: left;
+    padding: 0px 30px 10px 30px;
+  }
+
 
 	/*.reloj {
     width: 200px;
