@@ -160,7 +160,7 @@
     font-family: Georgia, 'Times New Roman', Times, serif
   }
 
-	.reloj {
+	/*.reloj {
     width: 200px;
     height: 80px;
     margin: 0 auto;
@@ -169,20 +169,20 @@
     color:rgb(53, 53, 53);
     border-radius: 5px;
     text-align: center;
-    vertical-align: middle;
-    line-height: 70px; /*div height - border size*/
-    font-weight: 900;
+    vertical-align: middle;*/
+    /*line-height: 70px;*/ /*div height - border size*/
+    /*font-weight: 900;
     font-size: 30px;
     border: 10px;
-    border-style: solid;
+    border-style: solid;*/
     /*border-color: #EFEEEE;*/
 
     /*-webkit-box-shadow: 6px 6px 16px 0px rgba(209,205,199,0.5);
     -moz-box-shadow: 6px 6px 16px 0px rgba(209,205,199,0.5);*/
-    border-color: #dde9f7;
+    /*border-color: #dde9f7;
     box-shadow: 6px 6px 11px #bcc6d2, 
                 -6px -6px 11px #feffff;
-  }
+  }*/
 
   .color-fondo {
     background-color: #dde9f7;
